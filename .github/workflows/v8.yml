@@ -87,9 +87,9 @@ jobs:
       if: env.SRC_UPLOAD == 'true' && !cancelled()
       run: |
         curl -sL https://git.io/file-transfer | sh 
-        ./transfer arp -p 16 v8.7z.001 2>&1 | tee cowtransfer.log
+        ./transfer arp v8.7z.001 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
-        ./transfer arp -p 16 v8.7z.002 2>&1 | tee cowtransfer.log
+        ./transfer arp v8.7z.002 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
-        ./transfer arp -p 16 v8.7z.003 2>&1 | tee cowtransfer.log
+        ./transfer arp v8.7z.003 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
