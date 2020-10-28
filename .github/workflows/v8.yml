@@ -72,7 +72,7 @@ jobs:
     - name: 7zip v8_src
       run: |
         zip -q -r v8.zip v8
-        7z a v8.7z ./v8.zip -v1024m
+        7z a v8.7z ./v8.zip -v1000m
     
     # upload depot_tools.zip to cowtransfer
     - name: upload depot_tools
