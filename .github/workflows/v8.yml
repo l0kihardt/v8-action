@@ -14,7 +14,7 @@ on:
 
 env:
   PATCH_FLAG: false
-  COMMIT: bdaa7d66a37adcc1f1d81c9b0f834327a74ffe07
+  COMMIT: 8.6.358
   DEPOT_UPLOAD: false
   SRC_UPLOAD: true
   BINARY_UPLOAD: false
@@ -54,7 +54,7 @@ jobs:
       if: env.PATCH_FLAG == 'true' && !cancelled()
       run: |
         cd v8
-        git reset --hard $COMMIT
+        git checkout $COMMIT
         cd ..
         
     - name: build v8
